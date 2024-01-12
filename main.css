@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
@@ -167,5 +167,80 @@ main {
 }
 
 .hidden {
-	display: none;
+  display: none;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  html {
+    font-size: 50%; /* Adjust font size for smaller screens */
+  }
+
+  main {
+    width: 90rem; /* Adjust main container width */
+    height: auto; /* Make height flexible */
+  }
+
+  .player {
+    padding: 4rem; /* Reduce padding */
+  }
+
+  .score {
+    font-size: 6rem; /* Adjust font size for scores */
+  }
+
+  .current {
+    padding: 1.5rem; /* Adjust padding for current score */
+  }
+
+  .btn {
+    font-size: 1.6rem; /* Adjust font size for buttons */
+    padding: 0.5rem 2rem; /* Adjust button padding */
+    position: relative; /* Change position to relative */
+    left: auto; /* Reset left position */
+    transform: none; /* Reset transform */
+    margin: 1rem auto; /* Center buttons */
+  }
+
+  .dice {
+    height: 8rem; /* Adjust dice size */
+    top: 12rem; /* Adjust top position for dice */
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 480px) {
+  main {
+    flex-direction: column; /* Stack players vertically */
+    width: auto; /* Adjust width */
+    padding: 2rem; /* Add padding */
+  }
+
+  .player {
+    flex: none; /* Adjust flex setting */
+    width: 100%; /* Full width */
+    padding: 2rem 0; /* Adjust padding */
+  }
+
+  .score {
+    font-size: 5rem; /* Adjust font size for scores */
+  }
+
+  .current {
+    width: 80%; /* Adjust current score width */
+  }
+
+  .btn {
+    font-size: 1.4rem; /* Reduce button font size */
+    padding: 0.5rem 1.5rem; /* Adjust button padding */
+    position: relative; /* Change position to relative */
+    left: auto; /* Reset left position */
+    transform: none; /* Reset transform */
+    margin: 1rem auto; /* Center buttons */
+  }
+
+  .dice {
+    height: 6rem; /* Adjust dice size */
+    top: 8rem; /* Adjust top position for dice */
+  }
 }
