@@ -194,12 +194,23 @@ main {
   }
 
   .btn {
-    font-size: 1.6rem; /* Adjust font size for buttons */
-    padding: 0.5rem 2rem; /* Adjust button padding */
+    /* General styles for buttons remain */
     position: relative; /* Change position to relative */
     left: auto; /* Reset left position */
     transform: none; /* Reset transform */
     margin: 1rem auto; /* Center buttons */
+  }
+
+  .btn--new {
+    order: 1; /* Adjust order if necessary */
+  }
+  .btn--roll {
+    order: 2; /* Place roll button after new game button */
+    margin-top: 2rem; /* Add margin for spacing */
+  }
+  .btn--hold {
+    order: 3; /* Place hold button after roll button */
+    margin-top: 2rem; /* Add margin for spacing */
   }
 
   .dice {
@@ -211,7 +222,7 @@ main {
 /* Responsive design for mobile devices */
 @media (max-width: 480px) {
   main {
-    flex-direction: column; /* Stack players vertically */
+    flex-direction: column; /* Stack elements vertically */
     width: auto; /* Adjust width */
     padding: 2rem; /* Add padding */
   }
@@ -233,14 +244,23 @@ main {
   .btn {
     font-size: 1.4rem; /* Reduce button font size */
     padding: 0.5rem 1.5rem; /* Adjust button padding */
-    position: relative; /* Change position to relative */
-    left: auto; /* Reset left position */
-    transform: none; /* Reset transform */
-    margin: 1rem auto; /* Center buttons */
+    position: absolute; /* Keep position absolute for precise placement */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure centered alignment */
   }
 
   .dice {
     height: 6rem; /* Adjust dice size */
     top: 8rem; /* Adjust top position for dice */
+  }
+
+  .btn--new {
+    top: 1rem; /* Position at the top */
+  }
+  .btn--roll {
+    bottom: 5rem; /* Position below the game board */
+  }
+  .btn--hold {
+    bottom: 1rem; /* Position at the very bottom */
   }
 }
